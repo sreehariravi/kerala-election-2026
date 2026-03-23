@@ -698,6 +698,35 @@ section { padding: 80px 24px; }
 .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.vis { opacity:1; transform:translateY(0); }
 
+/* ── NAV BACK BUTTON ── */
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--teal);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 72px;
+  left: 24px;
+  z-index: 99;
+}
+
+.nav-back:hover {
+  background: var(--amber);
+  gap: 12px;
+}
+
+.nav-back::before {
+  content: '←';
+  font-weight: bold;
+}
+
 /* ── FOOTER ── */
 footer {
   background: #07090F;
@@ -712,6 +741,8 @@ footer a { color: var(--teal); text-decoration: none; }
 <body>
 
 <div id="progress-bar"></div>
+
+<a href="../../index.html" class="nav-back">Home</a>
 
 <!-- NAV -->
 <nav>
